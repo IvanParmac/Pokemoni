@@ -1,0 +1,172 @@
+@import '~antd/dist/antd.css';
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.homeCard{
+  display: inline-block
+}
+
+.energy {
+  background-image: url('/images/energy-types.png');
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.blockClass{
+  display: inline-block;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  background-color: rgb(120, 195, 245);
+  justify-content: flex-start;
+  height: 6vh;
+  min-height: 32px;
+}
+
+.headerLink{
+  min-width: 80px;
+  background-color: rgb(120, 195, 245);
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  padding: 0 20px;
+  /* height:6vh; */
+}
+
+.headerLink a{
+color:rgb(17, 16, 16);
+}
+
+.headerLink:hover{
+  background-color: rgb(92, 136, 165);
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+  @media only screen and (min-width: 1200px) {
+    .firstCollClass{
+      padding-top: 20px;
+      padding-left: 150px;
+      padding-right: 20px;
+    }
+    .secondCollClass{
+      padding-left: 20px;
+      padding-right: 150px;
+    }
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .headerLink{
+      font-size: 20px;
+      min-height: 16px;
+    }
+    .header{
+      padding: 0;
+    } 
+  }
+
+.energy.fire {
+  background-position: 0px 0px;
+}
+
+.energy.colorless {
+  background-position: -25px 0px;
+}
+
+.energy.water {
+  background-position: -75px -50px;
+}
+
+.energy.lightning {
+  background-position: -25px -25px;
+}
+
+.energy.psychic {
+  background-position: -75px -25px;
+}
+.energy.fairy {
+  background-position: -50px 0px;
+}
+.energy.grass {
+  background-position:  -25px -50px;
+}
+.energy.fighting {
+  background-position:  -50px -25px;
+}
+.energy.metal {
+  background-position:  -75px 0px;
+}
+.energy.darkness {
+  background-position:  0px -50px;
+}
+.energy.dragon {
+  background-position:  0px -25px;
+}
+
+.cardNameClass {
+  padding-left: 0px;
+  text-align: left;
+  font-size: 32px;
+  
+}
+
+.cardSupertypeClass{
+  font-size: 24px;
+  color: rgb(149, 165, 166)
+  ;
+}
+
+.hpClass{
+  font-size: 20px;
+}
+
+.abilityTypeClass{
+  font-size: 24px;
+  color: dimgrey;
+  font-style: italic;
+}
+
+.abilityNameClass{
+  font-size: 24px;
+  color: black;
+  font-style: normal;
+}
+
+.textAlignCenter{
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.serifFont{
+  font-family: serif;
+}
+
+.serifFont2{
+  font-family: serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.flexibleContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+firstCollClass{
+  font-style: normal;
+}
+
+secondCollClass{
+  font-style: normal;
+}
+
