@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Row, Col } from 'antd';
 import PropTypes from 'prop-types';
 
@@ -7,24 +6,16 @@ export default class extends Component {
   static displayName = 'Details'
   static propTypes = {
     match: PropTypes.shape(),
-  }
-
-  state = {
-    card: {},
+    card: PropTypes.shape(),
+    fetchDetails: PropTypes.func,
   }
 
   componentWillMount() {
-    const { match } = this.props;
-    axios.get(`https://api.pokemontcg.io/v1/cards/${match.params.id}`)
-      .then((res) => {
-        if (res.data.card) {
-          this.setState({ card: res.data.card });
-        }
-      });
+    this.props.fetchDetails(this.props.match.params.id);
   }
 
   renderAttacks = () => {
-    const { card: { attacks } } = this.state;
+    const { card: { attacks } } = this.props;
 
     if (!attacks || attacks.length === 0) {
       return null;
@@ -42,7 +33,7 @@ export default class extends Component {
   }
 
   renderAbility = () => {
-    const { card: { ability } } = this.state;
+    const { card: { ability } } = this.props;
 
     if (!ability) {
       return null;
@@ -56,7 +47,7 @@ export default class extends Component {
   }
 
   renderWeaknesses = () => {
-    const { card } = this.state;
+    const { card } = this.props;
     const weaknessDOM = [];
 
     if (card.weaknesses && card.weaknesses.length !== 0) {
@@ -76,7 +67,7 @@ export default class extends Component {
   }
 
   renderResistances = () => {
-    const { card } = this.state;
+    const { card } = this.props;
     const resistanceDOM = [];
 
     if (card.resistances && card.resistances.length !== 0) {
@@ -96,7 +87,7 @@ export default class extends Component {
   }
 
   renderRetreatCost = () => {
-    const { card } = this.state;
+    const { card } = this.props;
     if (!card.retreatCost || card.retreatCost === 0) {
       return null;
     }
@@ -105,7 +96,7 @@ export default class extends Component {
   }
 
   renderTypes = () => {
-    const { card } = this.state;
+    const { card } = this.props;
     if (!card.types || card.types === 0) {
       return null;
     }
@@ -114,7 +105,7 @@ export default class extends Component {
   }
 
   render() {
-    const { card } = this.state;
+    const { card } = this.props;
 
     return (
       <div>
@@ -148,6 +139,9 @@ export default class extends Component {
             </Row>
             <Row style={{ fontSize: '16px', color: 'rgb(74, 74, 74)', paddingBottom: '10px' }}>
               {(card.text) ? (card.text) : null}
+            </Row>
+            <Row>
+              {this.renderAttacks()}
             </Row>
             <Row>
               <Col className="textAlignCenter" xs={8} sm={8}>
