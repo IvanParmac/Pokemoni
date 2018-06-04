@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import Routes from './Routes';
 import { sortBy } from '../../actions/index';
 
-
 const mapStateToProps = state => ({
   sort: state.sort,
 });

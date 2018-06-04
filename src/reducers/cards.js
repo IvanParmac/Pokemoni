@@ -1,8 +1,7 @@
-
 export default (state = [], action) => {
   switch (action.type) {
-    case 'ADD_CARD':
-      return [...state, action.card];
+    case 'ADD_CARDS':
+      return action.payload;
     default:
       return state;
   }

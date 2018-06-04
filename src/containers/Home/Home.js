@@ -22,9 +22,12 @@ export default class extends Component {
         <NavLink to={`/Details/${card.id}`}>
           <img src={card.imageUrl} alt={card.name} />
         </NavLink>
-        <Button onClick={() => this.props.toggleFavourites(card)}> {card.isFavourite ? <Icon type="star" /> : <Icon type="star-o" />}</Button>
+        <Button onClick={() => this.props.toggleFavourites(card)}>
+          {card.isFavourite ? <Icon type="star" /> : <Icon type="star-o" />}
+        </Button>
       </div>),
     );
+
   render() {
     return (
       <div>

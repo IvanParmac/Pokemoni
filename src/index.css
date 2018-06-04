@@ -38,7 +38,6 @@ body {
   color: black;
   font-size: 25px;
   padding: 0 20px;
-  /* height:6vh; */
 }
 
 .headerLink a{
@@ -48,7 +47,6 @@ color:rgb(17, 16, 16);
 .headerLink:hover{
   background-color: rgb(92, 136, 165);
   color: white;
-  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -93,21 +91,27 @@ color:rgb(17, 16, 16);
 .energy.psychic {
   background-position: -75px -25px;
 }
+
 .energy.fairy {
   background-position: -50px 0px;
 }
+
 .energy.grass {
   background-position:  -25px -50px;
 }
+
 .energy.fighting {
   background-position:  -50px -25px;
 }
+
 .energy.metal {
   background-position:  -75px 0px;
 }
+
 .energy.darkness {
   background-position:  0px -50px;
 }
+
 .energy.dragon {
   background-position:  0px -25px;
 }
@@ -116,13 +120,11 @@ color:rgb(17, 16, 16);
   padding-left: 0px;
   text-align: left;
   font-size: 32px;
-  
 }
 
 .cardSupertypeClass{
   font-size: 24px;
-  color: rgb(149, 165, 166)
-  ;
+  color: rgb(149, 165, 166);
 }
 
 .hpClass{
@@ -169,6 +171,7 @@ firstCollClass{
 secondCollClass{
   font-style: normal;
 }
+
 .anticon-star{
   color:yellow;
 }

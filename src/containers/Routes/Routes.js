@@ -10,12 +10,9 @@ import Home from '../Home/index';
 import Favourites from '../Favourites/index';
 import Details from '../Details/index';
 
-
 const { Item } = Menu;
 
 export default class extends Component {
-  static displayName = 'App'
-
   static propTypes = {
     sortBy: PropTypes.func,
   }

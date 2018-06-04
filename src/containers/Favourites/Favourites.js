@@ -18,7 +18,6 @@ const Favourites = ({ favourites, toggleFavourites }) =>
     </div >
   );
 
-
 Favourites.propTypes = {
   favourites: PropTypes.arrayOf(
     PropTypes.shape(),
